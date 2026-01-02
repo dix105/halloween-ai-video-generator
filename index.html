@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween AI Video Generator: Create Scary AI Videos for Free</title>
+    <meta name="description" content="Create scary or fun full Halloween videos from photos. Our free halloween AI video generator adds realistic horror effects for the perfect spooky vibe.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Halloween<span class="text-accent">AI</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="#how-it-works">How It Works</a>
+                <a href="#examples">Gallery</a>
+                <a href="#faq">FAQs</a>
+                <a href="#playground" class="btn btn-primary">Apply Video Effect</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-wrapper">
+            <img src="images/hero-bg.jpg" alt="Moonlit gothic courtyard" class="hero-bg-img">
+            <div class="fog-container">
+                <div class="fog-img fog-img-first"></div>
+                <div class="fog-img fog-img-second"></div>
+            </div>
+            <div class="ember-container"></div>
+        </div>
+        <div class="container hero-content">
+            <h1>Halloween AI Video Generator</h1>
+            <p>Create spooky and funny Halloween videos from your photos with our Free Halloween AI Video Generator. Instantly turn any picture into a haunting Halloween scene video featuring lifelike horror effects.</p>
+            <a href="#playground" class="btn btn-primary btn-large">Start Transformation</a>
+        </div>
+    </section>
+
+    <!-- Playground Section -->
+    <section id="playground" class="section playground-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Free Halloween AI Video Generator</h2>
+                <p>Upload your photo below to summon the spirits.</p>
+            </div>
+
+            <div class="playground-interface glass-card">
+                
+                <!-- Upload State -->
+                <div id="upload-state">
+                    <div id="upload-zone" class="upload-zone">
+                        <div class="upload-content">
+                            <div class="icon-upload">🎃</div>
+                            <h3>Drop your photo here</h3>
+                            <p>or click to browse</p>
+                            <input type="file" id="file-input" accept="image/*" hidden>
+                        </div>
+                        <div id="preview-area" class="preview-area hidden">
+                            <img id="preview-image" src="" alt="Preview">
+                            <button id="clear-btn" class="btn-icon">&times;</button>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button id="generate-btn" class="btn btn-primary btn-block" disabled>Apply Video Effect</button>
+                    </div>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loading-state" class="loading-state hidden">
+                    <div class="pumpkin-loader">
+                        <div class="pumpkin-eyes"></div>
+                        <div class="pumpkin-mouth"></div>
+                    </div>
+                    <p class="loading-text">Summoning spirits...</p>
+                </div>
+
+                <!-- Result State -->
+                <div id="result-container" class="result-state hidden">
+                    <div class="result-wrapper">
+                        <!-- Using the transformation preview from config -->
+                        <img id="result-image" src="https://assets.remixai.io/Public/samples/Halloween-Fillter.webp" alt="Halloween Transformation">
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="result-actions">
+                        <button id="download-btn" class="btn btn-accent">Download Video</button>
+                        <button id="reset-btn" class="btn btn-outline">Create Another</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section how-to-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Create Halloween AI Video?</h2>
+                <p>Follow these simple steps to turn your photo into a spooky Halloween video using AI.</p>
+            </div>
+            
+            <div class="steps-grid">
+                <!-- Step 1 -->
+                <div class="tombstone-card">
+                    <div class="step-number">1</div>
+                    <h3>Select & Upload Photo</h3>
+                    <p>Start by choosing a clear photo for the transformation. Upload the image you want to turn into a spooky Halloween scene.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="tombstone-card">
+                    <div class="step-number">2</div>
+                    <h3>Generate Halloween Videos</h3>
+                    <p>Let the AI begin! Click the “Apply Video Effect” button, and our AI will instantly generate a spooky and funny Halloween scene video from your photo in just one click.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="tombstone-card">
+                    <div class="step-number">3</div>
+                    <h3>Save and Share Scary Videos</h3>
+                    <p>Watch your Halloween vision come alive! Once satisfied, download your spooky video and share it with friends or on social media to scare everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Examples Section -->
+    <section id="examples" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>See Real Example of Halloween AI Video</h2>
+            </div>
+            <div class="gallery-grid">
+                <!-- Config Provided Examples -->
+                <div class="gallery-item">
+                    <video autoplay loop muted playsinline poster="images/gallery-poster-1.jpg">
+                        <source src="https://assets.remixai.io/Public/samples/H-Ex1.webm" type="video/webm">
+                    </video>
+                    <div class="gallery-overlay">
+                        <span>Spooky Transformation</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <video autoplay loop muted playsinline poster="images/gallery-poster-2.jpg">
+                        <source src="https://assets.remixai.io/Public/samples/H-Ex2.webm" type="video/webm">
+                    </video>
+                    <div class="gallery-overlay">
+                        <span>Eerie Effects</span>
+                    </div>
+                </div>
+                 <!-- Using extra images from prompt inputs to fill grid for visual balance if needed -->
+                <div class="gallery-item">
+                    <img src="images/gallery-poster-3.jpg" alt="Halloween Pumpkin">
+                    <div class="gallery-overlay">
+                        <span>Jack-o'-lantern</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits / Sample Images Grid (Visual Filler) -->
+    <section class="section benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Haunting Transformations</h2>
+                <p>Experience the chill of the moonlight.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="glass-card benefit-card">
+                    <img src="https://assets.remixai.io/Public/samples/H1.webp" alt="Sample 1">
+                </div>
+                <div class="glass-card benefit-card">
+                    <img src="https://assets.remixai.io/Public/samples/H2.webp" alt="Sample 2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>FAQs About AI Halloween Video Maker</h2>
+            </div>
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is the AI Halloween Video Generator?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our AI halloween video maker is an intelligent tool that transforms any uploaded photo into a spooky, Halloween-themed video within seconds. Simply upload your image, apply the desired effect, and download your eerie, cinematic creation.</p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is using the tool free? Are there any costs or credits required?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, RemixAI provides free credits for new users. First-time visitors who create an account receive complimentary credits to start generating Halloween videos right away.</p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do I need any special software or editing skills?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No, our tool is built for simplicity and ease of use. You don’t need any editing experience, just upload your photo, choose your effect, and let the AI handle the rest.</p>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How realistic are the AI Halloween effects?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>RemixAI’s Halloween Video Maker is powered by advanced AI models that analyze facial features, lighting, and expressions to produce incredibly realistic, movie-style Halloween transformations.</p>
+                    </div>
+                </div>
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Does the tool support pets, children, or group photos?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, our AI can process pets, children, or group photos; however, results may vary with multiple faces or complex backgrounds. For best results, follow the tool’s upload guidelines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <a href="#" class="logo">Halloween<span class="text-accent">AI</span></a>
+            </div>
+            <div class="footer-links">
+                <a href="#" id="open-privacy">Privacy Policy</a>
+                <a href="#" id="open-terms">Terms of Service</a>
+                <a href="mailto:contact@remixai.io">Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Halloween AI Video Generator. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Privacy Modal -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated:</strong> 2024</p>
+            <h4>1. Data Collection</h4>
+            <p>We collect only the minimum data necessary:</p>
+            <ul>
+            <li>Images you upload for processing (temporarily stored)</li>
+            <li>Basic usage analytics (non-personal)</li>
+            <li>Browser type and device information</li>
+            </ul>
+            <h4>2. Image Processing</h4>
+            <p>Your uploaded images are:</p>
+            <ul>
+            <li>Processed securely on our servers</li>
+            <li>Automatically deleted within 24 hours</li>
+            <li>Never shared with third parties</li>
+            <li>Not used for AI training without consent</li>
+            </ul>
+            <h4>3. Data Security</h4>
+            <p>All data transmission is encrypted using SSL/TLS protocols.</p>
+            <h4>4. Your Rights</h4>
+            <p>You have the right to request deletion of any stored data.</p>
+        </div>
+    </div>
+  
+    <!-- Terms Modal -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Terms of Service</h2>
+            <p><strong>Last Updated:</strong> 2024</p>
+            <h4>1. Acceptance of Terms</h4>
+            <p>By using this service, you agree to these Terms.</p>
+            <h4>2. Service Description</h4>
+            <p>This service provides AI-powered image transformation. Provided "as-is" without warranties.</p>
+            <h4>3. Acceptable Use</h4>
+            <p>You agree NOT to upload:</p>
+            <ul>
+            <li>Illegal or unlawful content</li>
+            <li>Explicit, pornographic, or obscene material</li>
+            <li>Content depicting violence or harm</li>
+            <li>Images you do not have rights to use</li>
+            </ul>
+            <h4>4. Intellectual Property</h4>
+            <p>You retain full ownership of your original images. Generated effects are royalty-free.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
