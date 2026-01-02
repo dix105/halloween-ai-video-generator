@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.remixai.io/video-effects/halloween-ai-video-generator/sitemap.xml
